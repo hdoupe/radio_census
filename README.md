@@ -47,21 +47,31 @@ results.  The purpose of SQLite_Helper is to help Query execute commands.  It se
 has some printing capabilities, and does operations on variables.
 
 Defined Functions:
+
 	"REGEXP('callsign',callsign)" - Routine for matching callsigns
+	
 	"HAVERSINE(lat1,lon1,lat2,lon2)" - calculate distance between two points (km)
+	
 	"PCT(v1,v2)" - divides v1 by v2 and multiplies result by 100
+	
 	"MEAN(*args)" - calculate mean of given arguments
+	
 	"DIVERSITY_RACE(*demographic variables*)" - if you use query, then all one needs
 		to do to call this function is to place '{div_race}' in one's SQL query, and
 		Query will evaluate it
+
 	"DIVERSITY_AGE(*demographic variables*)" This works the same as 'DIVERSITYRACE'.  
 		Just replace '{div_race}' with '{div_age}'
+
 	"PERCENTILE('variable',variable)" Returns the percentage of values under the queried number
+
 	"GREATERTHANPERCENTILE('variable',variable,percentile)" Returns 1 if the given 
 		value is greater than or equal to the value at the given percentile, 
 		returns 0 otherwise
+
 	"EDU(license)" Returns 1 if the license appears to be affiliated with an educational
 		organization, returns 0 otherwise (see code for methodology)
+
 	"POLITICALBOUNDARY('level',latitude,longitude)" This reverse geocodes the point and 
 		returns the name of the city, state, or country when level is 'name','admin1'
 		or 'cc'.
